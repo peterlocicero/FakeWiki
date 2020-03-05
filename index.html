@@ -6,8 +6,8 @@
 
     function postData(){
           const data = { 
-            user: document.getElementById("user").value,
-            // password: document.getElementById("password").value 
+            title: document.getElementById("title").value,
+            content: document.getElementById("content").value 
           };
 
           fetch('http://localhost:8080/login', {
@@ -27,9 +27,10 @@
   </head>
   <body>
 
-    <h1>What is your favorite food</h1>
+    <h1>Create a new page</h1>
     <p><a  href='/about.html'>about page</a></p>
-    <input type="TEXT" id="user" size="40"><br>
+    <input type="TEXT" id="title" size="40"><br>
+     <input type="TEXT" id="content" size="40"><br>
  <!--    <input type="password" id="password" size="40"><br> -->
  	<p id="party"></p>
     <input type="button" onclick="postData()" value="Submit">
