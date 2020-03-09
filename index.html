@@ -2,38 +2,46 @@
 <html>
   <head>
     <title>login page</title>
-    <script>
-
-    function postData(){
-          const data = { 
-            title: document.getElementById("title").value,
-            content: document.getElementById("content").value 
-          };
-
-          fetch('http://localhost:8080/login', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-          })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log('Success:', data);
-            document.getElementById('party').innerHTML = ':-)';
-          })
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="css/fakewikicss.css" />
+    <script src="fakewikijs.js" />
+    <script defer src="/faIcons/js/all.js"></script> 
   </head>
   <body>
 
-    <h1>Create a new page</h1>
+
+
+<div id="navs">
+  <img src="images/fakelogo.png">
+   <h1>FakeWiki</h1>
+  <ul id="bars">
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="createPage.html">Create</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <h1>The Fake Encyclopedia</h1>
+</div>
+
+<!--     <h1>Create a new page</h1>
     <p><a  href='/about.html'>about page</a></p>
     <input type="TEXT" id="title" size="40"><br>
      <input type="TEXT" id="content" size="40"><br>
- <!--    <input type="password" id="password" size="40"><br> -->
- 	<p id="party"></p>
-    <input type="button" onclick="postData()" value="Submit">
+  <input type="password" id="password" size="40"><br> -->
+ <!-- 	<p id="party"></p>
+    <input type="button" onclick="postData()" value="Submit"> --> 
+
+
+<div class="searchBar">
+  <div class="search-container">
+    <form  onclick="searchData()">
+      <input oninput="queryData()" id="searchy" type="text" placeholder="Search.." name="search">
+      <ul id="menu">
+      </ul>
+      <button type="submit"> Search</button>
+    </form>
+
+
+  </div>
+</div>
 
   </body>
 </html>
