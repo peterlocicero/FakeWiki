@@ -6,7 +6,7 @@
     <script src="fakewikijs.js" />
     <script defer src="/faIcons/js/all.js"></script> 
   </head>
-  <body>
+  <body onload="searchData()">
 
 
 
@@ -14,7 +14,7 @@
   <img src="images/fakelogo.png">
    <h1>FakeWiki</h1>
   <ul id="bars">
-    <li><a class="active" href="index.html">Home</a></li>
+    <li><a class="active" href="/">Home</a></li>
     <li><a href="createPage.html">Create</a></li>
     <li><a href="#about">About</a></li>
   </ul>
@@ -32,7 +32,7 @@
 
 <div class="searchBar">
   <div class="search-container">
-    <form  onclick="searchData()">
+    <form >
       <input oninput="queryData()" id="searchy" type="text" placeholder="Search.." name="search">
       <ul id="menu">
       </ul>
